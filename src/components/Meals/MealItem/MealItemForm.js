@@ -5,19 +5,20 @@ import Input from '../../UI/Input'
 
 const MealItemForm = ({id, onAddToCart}) => {
     const [isAmountValid, setIsAmountValid] = useState(true)
-    const amountInputRef = useRef()
+    const amountInputRef = useRef() // обращаемся к элементу инпута в компоненте
    
     
     const submitHandler = event => {
         event.preventDefault()
-
-        const inputAmount = amountInputRef.current.value
+        setIsAmountValid(true)
+        
+        const inputAmount = amountInputRef.current.value // получаем значение из инпута
         if(inputAmount.trim().length === 0 || +inputAmount < 1 || +inputAmount > 10){
             setIsAmountValid(false)
             return
         }
 
-        onAddToCart(+inputAmount)
+        onAddToCart(+inputAmount) // отправляем через свойство значение, которое потом объединяетя с данными об элементе и добавляется в общий массив
     }
     
 

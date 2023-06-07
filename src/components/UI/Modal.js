@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import styles from './Modal.module.css'
-import Card from './Card'
 
 const Backdrop = ({onHideCart}) => {
     return (
@@ -18,7 +17,7 @@ const ModalItem = ({children}) => {
     )
 }
 
-const portalElement = document.getElementById('overlays')
+const portalElement = document.getElementById('overlays') // вставляем модальное окно через портал
 
 const Modal = ({children, onHideCart}) => {
     return (

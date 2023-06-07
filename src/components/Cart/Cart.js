@@ -7,7 +7,7 @@ import CardContext from '../../store/card-context'
 const Cart = ({onHideCart}) => {
     const cartContext = useContext(CardContext)
 
-    const totalAmount = `$${Math.abs(cartContext.totalAmount).toFixed(2)}`
+    const totalAmount = `$${Math.abs(cartContext.totalAmount).toFixed(2)}` 
     const hasItems = cartContext.items.length > 0
 
     const removeCartItemHandler = id => {

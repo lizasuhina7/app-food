@@ -4,7 +4,7 @@ import CardContext from './card-context'
 const defaultCartState = {
     items: [],
     totalAmount: 0
-}
+} //значения по умолчанию
 
 const cardReducer = (state, action) => {  //начальное состояние(просто состояние), совершаемое действие (получение данных)
     if(action.type === 'ADD_ITEM'){
@@ -29,13 +29,13 @@ const cardReducer = (state, action) => {  //начальное состояни�
         } else {
             updatedItem = {
                 ...action.item
-            }
+            } // создаем объект из полученного элемента
             updatedItems = state.items.concat(updatedItem)//добавляет элемент в массив. объединяет массивы
         }
         return {
-            items: updatedItems,
+            items: updatedItems, // обновляем данные
             totalAmount: updetedTotalAmount
-        }
+        } 
     } else if(action.type == 'REMOVE_ITEM'){
         const existingItemIndex = state.items.findIndex(item => item.id === action.id)
         const existingCartItem = state.items[existingItemIndex]
@@ -70,7 +70,7 @@ const CardContextProvider = ({children}) => {
         dispatchCartAction({
             type: 'ADD_ITEM',
             item: item,
-        })
+        }) //данные, передаваемые в action 
     }
 
     const removeItemHandler = id => {
@@ -94,7 +94,6 @@ const CardContextProvider = ({children}) => {
         clearCart: clearCartHandler
     }
 
-    
     return (
         <CardContext.Provider value={CartContext}>
             {children}

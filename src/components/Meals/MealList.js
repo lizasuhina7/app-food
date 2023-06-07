@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import styles from './MealList.module.css'
 import MealItem from './MealItem/MealItem'
 import DUMMY_MEALS from '../../dummy-meals'

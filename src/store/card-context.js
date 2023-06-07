@@ -6,7 +6,7 @@ const CardContext = React.createContext({
     addItem: (item) => {},
     removeItem: (id) => {},
     clearCart: () => {}
-    //начальные значения
+    //начальные значения контекста
 })
 
 export default CardContext

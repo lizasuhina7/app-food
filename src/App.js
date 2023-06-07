@@ -6,7 +6,7 @@ import CardContextProvider from './store/CardContextProvider';
 
 
 function App() {
-  const [cartIsVisible, setCartIsVisible] = useState(false)
+  const [cartIsVisible, setCartIsVisible] = useState(false) //состояние карзины показать/закрыть
 
   const showCartHandler = () => {
     setCartIsVisible(true)

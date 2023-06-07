@@ -13,7 +13,7 @@ const MealItem = ({id, name, description, price}) => {
             name: name,
             amount: amount,
             price: price
-        })
+        }) // при клике на кнопку "добавить" из формы, данные добавляются в массив корзины через фукцию из контекста
     }
 
     return (
